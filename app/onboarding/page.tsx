@@ -8,9 +8,19 @@ export default function CreateSellerAccountPage() {
 
 	return (
 		<section className="min-h-screen bg-gray-50 py-12">
+
+
+		<div className="flex items-center gap-2">
+		 <Link href="/">
+
+				<img src="/plendify-logo.png" alt="Plendify Logo" width="120" />
+
+			</Link>
+						</div>
 			<div className='w-full mx-auto max-w-7xl px-16'>
 				<div className='w-180 bg-white py-16 px-12 rounded-xl'>
 					{/* Header */}
+
 					<div className='text-center mb-12'>
 						<h1 className="text-4xl font-extrabold mb-3">Create Your Seller's Account</h1>
 						<p className='text-gray-600'>Let's help you personalize your shop</p>
