@@ -12,7 +12,7 @@ export const Hero = () => {
 				</div>
 				<div>
 					<p className='text-lg max-w-3xl'>
-						<strong>The app</strong> helps African businesses, entrepreneurs, producers and makers reach buyers in
+						Plendify helps African businesses, entrepreneurs, producers and makers reach buyers in
 						Europe, the USA, and the rest of the world--from sourcing customers to shipping products
 						from Africa to the world.
 					</p>
