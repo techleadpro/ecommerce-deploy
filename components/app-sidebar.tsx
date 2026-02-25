@@ -24,6 +24,8 @@ import {
 	Logout01Icon
 } from "@hugeicons/core-free-icons";
 
+import PlendifyLogo from "@/public/plendify-logo.png";
+
 
 const links: { title: string; icon: IconSvgElement; url: string; isActive: boolean }[] = [
 	{
@@ -79,7 +81,16 @@ const links: { title: string; icon: IconSvgElement; url: string; isActive: boole
 export function AppSidebar() {
 	return (
 		<Sidebar>
+
+		<div className="flex items-center gap-2">
+		 <Link href="/">
+
+				<img src="/plendify-logo.png" alt="Plendify Logo" width="120" />
+
+			</Link>
+						</div>
 			<SidebarHeader />
+
 			<SidebarContent className="mt-35">
 				<SidebarMenu className="gap-0">
 					{links.map((link) => (
