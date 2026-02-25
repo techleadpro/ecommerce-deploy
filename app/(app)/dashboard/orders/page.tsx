@@ -34,7 +34,7 @@ type StatCardProps = {
 };
 
 
-function StatCard({ label, value }) {
+function StatCard({ label, value }: StatCardProps) {
 	return (
 		<div className="flex-1 border border-gray-200 rounded-md p-4">
 			<p className="text-[13px] text-gray-500 mb-2">{label}</p>
