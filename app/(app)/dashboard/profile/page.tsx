@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const tabs = ["Personal Information", "Shop/Business Information", "Notification Settings"];
 
-function Field({ label, placeholder, hint, colSpan = 1 }) {
+function Field({ label, placeholder, hint, colSpan = 1 }: { label: string; placeholder: string; hint: string; colSpan: number }) {
 	return (
 		<div className={`flex flex-col ${colSpan === 2 ? "col-span-2" : ""}`}>
 			<label className="text-[13px] text-gray-500 mb-2">{label}</label>
@@ -19,7 +19,7 @@ function Field({ label, placeholder, hint, colSpan = 1 }) {
 	);
 }
 
-function Toggle({ label, enabled, onToggle }) {
+function Toggle({ label, enabled, onToggle }: { label: string; enabled: boolean; onToggle: () => void }) {
 	return (
 		<div className="flex items-center justify-between px-4 py-4 border-b border-gray-200 last:border-b-0">
 			<span className="text-[15px] font-semibold">{label}</span>
@@ -38,9 +38,9 @@ function Toggle({ label, enabled, onToggle }) {
 function PersonalInfo() {
 	return (
 		<div className="grid grid-cols-2 gap-x-8 gap-y-6 mt-6">
-			<Field label="First Name" placeholder="John" hint="Enter your legal first name" />
-			<Field label="Last Name" placeholder="Martins" hint="Enter your legal last name" />
-			<Field label="Email address" placeholder="john@gmail.com" hint="Enter your valid email address" />
+			<Field label="First Name" placeholder="John" hint="Enter your legal first name" colSpan={1} />
+			<Field label="Last Name" placeholder="Martins" hint="Enter your legal last name" colSpan={1} />
+			<Field label="Email address" placeholder="john@gmail.com" hint="Enter your valid email address" colSpan={1} />
 			<div className="flex flex-col">
 				<label className="text-[13px] text-gray-500 mb-2">Nationality</label>
 				<div className="flex items-center gap-2 text-[14px] p-3 outline-1 outline-gray-300 rounded-sm">
@@ -70,15 +70,15 @@ function PersonalInfo() {
 function ShopInfo() {
 	return (
 		<div className="grid grid-cols-2 gap-x-8 gap-y-6 mt-6">
-			<Field label="Shop Name" placeholder="Plendify" hint="Enter a valid name" />
-			<Field label="Shop Category" placeholder="Fashion" hint="Select your most suitable category" />
-			<Field label="Sub Category" placeholder="Shoes" hint="Select your most suitable sub category" />
-			<Field label="Business Email Address" placeholder="johnmartins@gmail.com" hint="Enter a valid email address" />
-			<Field label="State/Province" placeholder="Lagos" hint="Enter a valid state/province" />
-			<Field label="City" placeholder="Eti-Osa" hint="Enter a valid city" />
+			<Field label="Shop Name" placeholder="Plendify" hint="Enter a valid name" colSpan={0} />
+			<Field label="Shop Category" placeholder="Fashion" hint="Select your most suitable category" colSpan={0} />
+			<Field label="Sub Category" placeholder="Shoes" hint="Select your most suitable sub category" colSpan={0} />
+			<Field label="Business Email Address" placeholder="johnmartins@gmail.com" hint="Enter a valid email address" colSpan={0} />
+			<Field label="State/Province" placeholder="Lagos" hint="Enter a valid state/province" colSpan={0} />
+			<Field label="City" placeholder="Eti-Osa" hint="Enter a valid city" colSpan={0} />
 			<Field label="Address Line 1" placeholder="28 Deigo street" hint="Enter a valid address" colSpan={2} />
-			<Field label="Zip/Postal Code" placeholder="7588993" hint="Enter a valid zip/postal code" />
-			<Field label="Tax ID (optional)" placeholder="N-774892" hint="Enter a valid tax ID" />
+			<Field label="Zip/Postal Code" placeholder="7588993" hint="Enter a valid zip/postal code" colSpan={0} />
+			<Field label="Tax ID (optional)" placeholder="N-774892" hint="Enter a valid tax ID" colSpan={0} />
 			<div className="col-span-2 mt-2">
 				<button className="bg-[#6A1B9A] hover:bg-[#8646ad] text-white text-[15px] px-8 py-3 rounded-sm transition-colors cursor-pointer">
 					Save Changes
