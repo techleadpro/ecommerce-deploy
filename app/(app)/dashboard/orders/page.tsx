@@ -27,6 +27,13 @@ const MOCK_ORDERS = [
 	{ id: "PLD64776", status: "Delivered", orderDate: "11/28/2026 - 08:00", estDelivery: "12/01/2026 - 08:00" },
 ];
 
+// code
+type StatCardProps = {
+  label: string;
+  value: string | number;
+};
+
+
 function StatCard({ label, value }) {
 	return (
 		<div className="flex-1 border border-gray-200 rounded-md p-4">
