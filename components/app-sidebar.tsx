@@ -84,15 +84,8 @@ export function AppSidebar() {
 
 			<SidebarHeader />
 
-
 			<SidebarContent className="mt-35">
-			<div className="flex items-center gap-2">
-			 <Link href="/">
 
-					<img src="/plendify-logo.png" alt="Plendify Logo" width="120" />
-
-				</Link>
-							</div>	
 				<SidebarMenu className="gap-0">
 					{links.map((link) => (
 						<Link href={link.url}>
