@@ -67,7 +67,7 @@ export const Form = () => {
 									<label className='text-[13px] text-gray-500 mb-2'>Country</label>
 									<div className='relative'>
 										<select className="w-full text-[14px] p-3 outline-1 outline-gray-300 rounded-sm appearance-none">
-											<option value="Ghana">Select country</option>
+											<option value="Ghana">Ghana</option>
 											<option value="Togo">Togo</option>
 											<option value="Benin">Benin</option>
 											<option value="Nigeria">Nigeria</option>

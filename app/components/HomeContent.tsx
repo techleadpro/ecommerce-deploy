@@ -38,7 +38,7 @@ export const HomeContent = () => {
 									<span className="text-xl font-extrabold">Focus on your craft--we handle the logistics</span>
 								</div>
 								<p>
-									From shipping to cross-border delivery. Plendify takes care of the hard parts so you can focus on running business.
+									From shipping to cross-border delivery.
 								</p>
 							</li>
 							<li className="border border-gray-300">
@@ -125,7 +125,7 @@ export const HomeContent = () => {
 					<div className='flex flex-col gap-y-16'>
 						<div>
 							<h1 className="text-5xl font-extrabold">Grow Your Business</h1>
-							<p className='text-gray-400 mt-4'>Reach buyers around the world and expand your business beyond borders. With Plendify you can focus on creating amazing products while we take care of shipping, logistics, and marketing-so your business grows effortlessly on a global scale</p>
+							<p className='text-gray-400 mt-4'>Reach buyers around the world and expand your business beyond borders.</p>
 						</div>
 						<div>
 							<Button label="Create a free account." />
@@ -252,8 +252,8 @@ export const HomeContent = () => {
 						<div>
 							<h2 className='text-2xl font-extrabold mb-5'>Contact Us</h2>
 							<ul className='*:cursor-pointer *:mb-4 [&>li]:text-lg'>
-								<li>Digital Address: GL-116-2956</li>
-								<li>Address: 38 Garden Road, East Legon,<br />Accra, Ghana.</li>
+								<li>Digital Address:</li>
+								<li>Address: 8 Garden Road, East Legon,<br />Accra, Ghana.</li>
 								<ul className='flex gap-x-8'>
 									<li><IconLinkedIn /></li>
 									<li><IconX /></li>
