@@ -20,21 +20,21 @@ const STATUS_COLORS = {
 	Delivered: "text-violet-500",
 };
 
-const MOCK_ORDERS = [
+const MOCK_ORDERS: Order[] = [
 	{ id: "PLD64773", status: "Processing", orderDate: "12/01/2026 - 09:34", estDelivery: "12/01/2026 - 09:34" },
 	{ id: "PLD64774", status: "Cancelled", orderDate: "12/01/2026 - 10:00", estDelivery: "12/05/2026 - 10:00" },
 	{ id: "PLD64775", status: "Shipped", orderDate: "12/01/2026 - 11:00", estDelivery: "12/06/2026 - 11:00" },
 	{ id: "PLD64776", status: "Delivered", orderDate: "11/28/2026 - 08:00", estDelivery: "12/01/2026 - 08:00" },
 ];
 
-// code
-type StatCardProps = {
-  label: string;
-  value: string | number;
-};
+interface Order {
+	id: string;
+	status: "Processing" | "Cancelled" | "Shipped" | "Delivered";
+	orderDate: string;
+	estDelivery: string;
+}
 
-
-function StatCard({ label, value }: StatCardProps) {
+function StatCard({ label, value }: { label: string; value: string | number }) {
 	return (
 		<div className="flex-1 border border-gray-200 rounded-md p-4">
 			<p className="text-[13px] text-gray-500 mb-2">{label}</p>
@@ -43,14 +43,14 @@ function StatCard({ label, value }: StatCardProps) {
 	);
 }
 
-function DeliveryTracker({ status }) {
-	const completed = STATUS_MAP[status] ?? 0;
+function DeliveryTracker({ status }: { status: keyof typeof STATUS_MAP | string }) {
+	const completed = STATUS_MAP[status as keyof typeof STATUS_MAP] ?? 0;
 	return (
 		<div className="mt-4">
 			<div className="flex items-center w-full">
 				{STATUS_STEPS.map((_, i) => (
 					<div key={i} className="flex items-center flex-1 last:flex-none">
-						<div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${i < completed ? "bg-green-700" : "bg-gray-300"}`}>
+						<div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${i < completed ? "bg-green-700" : "bg-gray-300"}`}>
 							{i < completed && (
 								<svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
 									<path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
@@ -75,7 +75,7 @@ function DeliveryTracker({ status }) {
 	);
 }
 
-function OrderDetailView({ order, onBack }) {
+function OrderDetailView({ order, onBack }: { order: Order; onBack: () => void; }) {
 	return (
 		<div className="px-6 py-8">
 			<button onClick={onBack} className="flex items-center gap-1 text-[15px] font-bold mb-6">
@@ -144,7 +144,7 @@ function OrderDetailView({ order, onBack }) {
 }
 
 export default function OrdersPage() {
-	const [selectedOrder, setSelectedOrder] = useState(null);
+	const [selectedOrder, setSelectedOrder] = useState<Order | null>(null);
 
 	if (selectedOrder) {
 		return <OrderDetailView order={selectedOrder} onBack={() => setSelectedOrder(null)} />;
@@ -152,7 +152,7 @@ export default function OrdersPage() {
 
 	const stats = {
 		total: MOCK_ORDERS.length,
-		processed: MOCK_ORDERS.filter(o => o.status === "Processing" || o.status === "Picked").length,
+		processed: MOCK_ORDERS.filter(o => o.status === "Processing").length,
 		shipped: MOCK_ORDERS.filter(o => o.status === "Shipped").length,
 		delivered: MOCK_ORDERS.filter(o => o.status === "Delivered").length,
 	};
@@ -176,7 +176,7 @@ export default function OrdersPage() {
 					<div className="flex gap-4 mb-6">
 						{["Choose Order Status", "To", "From"].map((ph) => (
 							<div key={ph} className="flex-1 relative">
-								<select className="w-full appearance-none text-[13px] text-gray-400 p-3 outline outline-1 outline-gray-300 rounded-sm bg-white pr-8">
+								<select className="w-full appearance-none text-[13px] text-gray-400 p-3 outline-1 outline-gray-300 rounded-sm bg-white pr-8">
 									<option>{ph}</option>
 								</select>
 								<svg className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
