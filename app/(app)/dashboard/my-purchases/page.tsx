@@ -149,7 +149,7 @@ function PurchaseCard({ purchase, onView }: { purchase: Purchase; onView: React.
 	);
 }
 
-function Pagination({ current, total, onChange }: { current: number; total: number; onChange: React.Dispatch<React.SetStateAction<number | null>>; }) {
+function Pagination({ current, total, onChange }: { current: number; total: number; onChange: (p: number) => void; }) {
 	return (
 		<div className="flex items-center justify-center gap-2 mt-6">
 			<button
