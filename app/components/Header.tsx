@@ -6,7 +6,7 @@ export default function Header() {
 	return (
 		<section className="w-full font-normal text-sm mx-auto max-w-7xl px-16">
 			<nav className="flex justify-end items-center gap-x-30">
-			<div className="flex items-center gap-2">
+			<div className="flex items-center gap-1">
 			 <Link href="/">
 
 					<img src="/plendify-logo.png" alt="Plendify Logo" width="120" />
