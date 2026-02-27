@@ -26,6 +26,7 @@ import {
 	UserIcon,
 	Logout01Icon
 } from "@hugeicons/core-free-icons";
+import PlendifyLogo from "@/public/plendify-logo.png";
 
 // Remove isActive from the links array entirely — it's derived from the URL now
 const links: { title: string; icon: IconSvgElement; url: string }[] = [
@@ -46,7 +47,11 @@ export function AppSidebar() {
 		<Sidebar>
 			<SidebarHeader>
 				<SidebarMenuItem className="pl-12 mt-12 text-3xl font-bold">
-					<Link href="/" >LOGO</Link>
+				<Link href="/">
+
+ 					<img src="/plendify-logo.png" alt="Plendify Logo" width="120" />
+
+ 				</Link>
 				</SidebarMenuItem>
 			</SidebarHeader>
 			<SidebarContent className="mt-15">
