@@ -1,3 +1,11 @@
+"use client"
+
+import { useState } from "react";
+
+import { NotificationsPanel } from "./NotificationsPanel";
+import { CartPanel } from "./CartPanel";
+import { WishlistPanel } from "./WishlistPanel";
+
 import {
 	InputGroup,
 	InputGroupAddon,
@@ -20,9 +28,12 @@ import {
 	Notification01Icon,
 	ShoppingBasketFavorite01Icon
 } from '@hugeicons/core-free-icons';
-import Link from "next/link";
 
 export default function DashboardHeader() {
+	const [showNotifications, setShowNotifications] = useState(false);
+	const [showCart, setShowCart] = useState(false);
+	const [showWishlist, setShowWishlist] = useState(false);
+
 	return (
 		<header className="max-w-7xl flex justify-between">
 			<InputGroup className="max-w-xl h-12">
@@ -48,19 +59,25 @@ export default function DashboardHeader() {
 						</SelectGroup>
 					</SelectContent>
 				</Select>
-				<Link href="#" className="justify-items-center text-xs">
+				<button onClick={() => setShowNotifications(true)} className="justify-items-center text-xs">
 					<HugeiconsIcon icon={Notification01Icon} size={22} color="currentColor" strokeWidth={1.5} />
 					<span>Notifications</span>
-				</Link>
-				<Link href="#" className="justify-items-center text-xs">
+				</button>
+				<button onClick={() => setShowCart(true)} className="justify-items-center text-xs">
 					<HugeiconsIcon icon={ShoppingCart02Icon} size={22} color="currentColor" strokeWidth={1.5} />
 					<span>Cart</span>
-				</Link>
-				<Link href="#" className="justify-items-center text-xs">
+				</button>
+				<button onClick={() => setShowWishlist(true)} className="justify-items-center text-xs">
 					<HugeiconsIcon icon={ShoppingBasketFavorite01Icon} size={22} color="currentColor" strokeWidth={1.5} />
 					<span>Wishlist</span>
-				</Link>
+				</button>
 			</div>
+
+			{showNotifications && (
+				<NotificationsPanel onClose={() => setShowNotifications(false)} />
+			)}
+			{showCart && <CartPanel onClose={() => setShowCart(false)} />}
+			{showWishlist && <WishlistPanel onClose={() => setShowWishlist(false)} />}
 		</header>
 	);
 }

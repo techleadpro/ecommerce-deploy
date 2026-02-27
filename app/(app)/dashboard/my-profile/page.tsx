@@ -105,7 +105,7 @@ function NotificationSettings() {
 	);
 }
 
-export default function ProfilePage() {
+export default function MyProfilePage() {
 	const [activeTab, setActiveTab] = useState(0);
 
 	return (

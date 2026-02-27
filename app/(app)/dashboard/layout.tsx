@@ -15,18 +15,16 @@ export default function DashboardLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
-			<body>
-				<SidebarProvider>
-					<AppSidebar />
-					<main className="w-full">
-						<SidebarTrigger />
-						<section className="w-full py-5 px-25">
-							{children}
-						</section>
-					</main>
-				</SidebarProvider>
-			</body>
-		</html>
+		<section>
+			<SidebarProvider>
+				<AppSidebar />
+				<main className="w-full">
+					<SidebarTrigger />
+					<section className="w-full py-5 px-25">
+						{children}
+					</section>
+				</main>
+			</SidebarProvider>
+		</section>
 	);
 }
