@@ -29,7 +29,7 @@ export const HomeContent = () => {
 									<span className="text-xl font-extrabold">Reach buyers Globally</span>
 								</div>
 								<p>
-									Sell to customers in Europe, the USA and the Rest of the World, without needing international contacts or networks
+									Sell to customers in Europe, the USA and the Rest of the World, without needing international contacts or networks.
 								</p>
 							</li>
 							<li className="border border-gray-300">
@@ -38,7 +38,7 @@ export const HomeContent = () => {
 									<span className="text-xl font-extrabold">Focus on your craft--we handle the logistics</span>
 								</div>
 								<p>
-									From shipping to cross-border delivery.
+									From shipping to cross-border delivery. Plendify takes care of the hard partsd so you can focus on running your business.
 								</p>
 							</li>
 							<li className="border border-gray-300">
@@ -93,7 +93,7 @@ export const HomeContent = () => {
 									<span className="text-xl font-extrabold">Focus on your craft--we handle the logistics</span>
 								</div>
 								<p>
-									From shipping to cross-border delivery.
+									From shipping to cross-border delivery. Plendify takes care of the hard partsd so you can focus on running your business.
 								</p>
 							</li>
 							<li className="border border-gray-300">
@@ -124,7 +124,7 @@ export const HomeContent = () => {
 					<div className='flex flex-col gap-y-16'>
 						<div>
 							<h1 className="text-5xl font-extrabold">Grow Your Business</h1>
-							<p className='text-gray-400 mt-4'>Reach buyers around the world and expand your business beyond borders.</p>
+							<p className='text-gray-400 mt-4'>Reach buyers around the world and expand your business beyond borders. With Plendify, you can focus on creating amazing products while we take care of shipping, logisticsm abd marketing-so your business grows effortlessly on a global scale.</p>
 						</div>
 						<div>
 							<Button label="Create a free account." />
