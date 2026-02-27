@@ -72,7 +72,6 @@ export const HomeContent = () => {
 									src="/payment-1.jpg"
 									width={500}
 									height={350}
-									objectFit='cover'
 									alt="" />
 								<div className="flex items-center gap-x-3 mb-4">
 									<IconGroup />
@@ -253,7 +252,7 @@ export const HomeContent = () => {
 							<h2 className='text-2xl font-extrabold mb-5'>Contact Us</h2>
 							<ul className='*:cursor-pointer *:mb-4 [&>li]:text-lg'>
 								<li>Digital Address:</li>
-								<li>Address: 38 Garden Road, East Legon,<br />Accra, Ghana.</li>
+								<li>Address: 8 Garden Road, East Legon,<br />Accra, Ghana.</li>
 								<ul className='flex gap-x-8'>
 									<li><IconLinkedIn /></li>
 									<li><IconX /></li>
