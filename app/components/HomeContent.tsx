@@ -38,7 +38,7 @@ export const HomeContent = () => {
 									<span className="text-xl font-extrabold">Focus on your craft--we handle the logistics</span>
 								</div>
 								<p>
-									From shipping to cross-border delivery. Plendify takes care of the hard partsd so you can focus on running your business.
+									From shipping to cross-border delivery. Plendify takes care of the hard parts so you can focus on running your business.
 								</p>
 							</li>
 							<li className="border border-gray-300">
@@ -93,7 +93,7 @@ export const HomeContent = () => {
 									<span className="text-xl font-extrabold">Focus on your craft--we handle the logistics</span>
 								</div>
 								<p>
-									From shipping to cross-border delivery. Plendify takes care of the hard partsd so you can focus on running your business.
+									From shipping to cross-border delivery. Plendify takes care of the hard parts so you can focus on running your business.
 								</p>
 							</li>
 							<li className="border border-gray-300">
